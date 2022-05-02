@@ -1,0 +1,159 @@
+#game-screen {}
+
+#drops,
+#bullets,
+#walls,
+#enemies,
+#hero {
+    z-index: 10;
+}
+
+#fps {
+    position: absolute;
+    bottom: 11px;
+    right: 10px;
+    color: white;
+    font-size: small;
+}
+
+#how-to-play {
+    position: absolute;
+    bottom: 11px;
+    right: 10px;
+    color: white;
+    font-size: small;
+}
+
+#game-sky {
+    position: absolute;
+    height: calc((100vh - 8px) * 1.6 / 11);
+    width: 100%;
+    background-color: rgb(10 58 137 / 26%);
+    position: absolute;
+    display: block;
+    z-index: 0;
+    background-color: lightgreen;
+    background-image: url("../images/astrology_astronomy_beautiful_cosmos_dark_dust_evening_exploration-1560681.jpg");
+    background-position: -530% 34.5%;
+    background-size: auto;
+}
+
+#background {
+    position: absolute;
+    height: calc((100vh - 8px) * 1.6 / 11);
+    width: 100%;
+    background-image: url(../images/PngItem_373519.png);
+    background-position: 0 100%;
+    background-size: contain;
+    filter: opacity(0.7);
+}
+
+#clouds {
+    position: absolute;
+    height: calc((100vh - 8px));
+    z-index: 100000;
+    width: 100%;
+    background-image: url(../images/NicePng_cartoon-clouds-png_1468584.png);
+    background-position: 0 100%;
+    filter: opacity(0.35);
+    pointer-events: none;
+}
+
+#bushes {
+    position: absolute;
+    height: calc((100vh - 8px) * 2 / 11);
+    width: 100%;
+    background-image: url(../images/dlpng_com_Bush_Silhouette_Png__Page_1_5314967-bush-silhouette-png-94-images-in-collection-page-1-bush-silhouette-png-772_316-removebg-preview.png);
+    background-position: 0 100%;
+    background-size: contain;
+    filter: opacity(0.2);
+}
+
+#game-area {
+    height: calc((100vh - 8px) / 11 * 8);
+    width: 100%;
+    background-color: lightgreen;
+    background-image: url("../images/scifi_main_menu.jpg");
+    background-position: 100% 10%;
+    background-size: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+#game-modal {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 60vw;
+    height: 55vh;
+    top: 15vh;
+    left: 15vw;
+    background-color: var(--background);
+    z-index: 1000;
+    border: 3px ridge var(--border);
+    box-shadow: 4px 6px 9px 1px #4a2e2e;
+    border-radius: 10px;
+}
+
+#game-modal-title {
+    text-align: center;
+    font-size: medium;
+    color: var(--title-color);
+    padding: 0 12px;
+}
+
+#game-modal-image {
+    height: 50%;
+    aspect-ratio: 1;
+    padding: 8px;
+    background-color: white;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+}
+
+#game-modal-buttons {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-modal-texts {
+    color: white;
+    padding: 12px;
+    font-size: large;
+}
+
+#game-modal-texts p {
+    margin: 16px;
+}
+
+@media (min-width: 1024px) {
+    body {
+        width: 90vw;
+    }
+    .icon-btn {
+        font-size: xxx-large;
+    }
+    .stat label {
+        font-size: x-large,
+    }
+    .stat p {
+        font-size: xx-large;
+        margin: 12px;
+    }
+    .level-btn {
+        margin: 12px;
+        padding: 12px;
+    }
+    #game-modal-title {
+        font-size: x-large;
+    }
+    #game-modal-buttons {
+        flex-direction: column;
+    }
+}

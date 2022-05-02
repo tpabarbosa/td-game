@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="manifest" href="./manifest.json" crossorigin="use-credentials"> -->
+    <link rel="stylesheet" href="./css/orientation.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/top-bar.css">
+    <link rel="stylesheet" href="./css/playing.css">
+    <script src="https://kit.fontawesome.com/a16d431142.js" crossorigin="anonymous"></script>
+    <title>TD Game</title>
+</head>
+
+<body id="body">
+    <div id="container">
+        <section id="loading-screen" class="">
+            <!-- <img id="loading-image" src="./images/loading.png"> -->
+            <h2 id="loading-text">Carregando...</h2>
+            <button id="loading-start-button" class='icon-btn invisible'>
+                <i class="fa-solid fa-play"></i>
+            </button>
+        </section>
+        <div id="top-bar">
+            <div id="options-buttons">
+                <button id="game-help" class='top-bar-icon-btn'>
+                        <span class="fa-stack">
+                            <i class="fa-solid fa-question fa-stack-1x"></i>
+                        </span>
+                    </button>
+                <button id="toggle-music" class='top-bar-icon-btn'>
+                        <span class="fa-stack">
+                            <i class="fa-solid fa-music fa-stack-1x"></i>
+                            <i id="music-off" class="fa-solid fa-ban fa-stack-2x hidden" style="color:#9b2c2c"></i>
+                        </span>
+                    </button>
+                <button id="toggle-sfx" class='top-bar-icon-btn'>
+                        <span class="fa-stack">
+                            <i class="fa-solid fa-volume-high fa-stack-1x"></i>
+                            <i id="sfx-off" class="fa-solid fa-ban fa-stack-2x hidden" style="color:#9b2c2c"></i>
+                        </span>
+                    </button>
+                <button id="game-pause" class='top-bar-icon-btn hidden'>
+                        <span class="fa-stack">
+                            <i class="fa-solid fa-pause fa-stack-1x"></i>
+                        </span>
+                    </button>
+            </div>
+            <div id="game-info">
+                <div id="level-counter" class="info-container hidden"><label>Nível</label><span id="level-count">1</span></div>
+                <div id="hearts-counter" class="info-container hidden">
+                    <i class="fa-solid fa-heart heart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <i class="fa-solid fa-heart heart"></i>
+                    <i class="fa-solid fa-heart-crack heart"></i>
+                </div>
+                <div class="info-container"><img src="./images/coins_static.png" class="info-image"><span id="gold-count">0</span></div>
+            </div>
+        </div>
+        <section id="menu-screen" class="hidden">
+            <div id="menu-top">
+                <div class="stats">
+                    <div class="stat">
+                        <label>Velocidade</label>
+                        <p id='stat-velocity'>10</p>
+                    </div>
+                    <div class="stat">
+                        <label>Defesa</label>
+                        <p id="stat-defense">500</p>
+                    </div>
+                </div>
+                <img id="menu-image" src="./images/hero.png">
+                <div class="stats">
+                    <div class="stat">
+                        <label>Dano</label>
+                        <p id="stat-damage">10</p>
+                    </div>
+                    <div class="stat">
+                        <label>Taxa de Disparo</label>
+                        <p id="stat-shoot-rate">60</p>
+                    </div>
+                </div>
+            </div>
+            <div id="menu-buttons">
+                <button id="level1" class="level-btn text-btn"><i class="fa-solid fa-play"></i> Level 1</button>
+                <button id="level2" class="level-btn text-btn disabled"><i class="fa-solid fa-lock"></i> Level 2</button>
+                <button id="level3" class="level-btn text-btn disabled"><i class="fa-solid fa-lock"></i> Level 3</button>
+                <button id="level4" class="level-btn text-btn disabled"><i class="fa-solid fa-lock"></i> Level 4</button>
+                <button id="level5" class="level-btn text-btn disabled"><i class="fa-solid fa-lock"></i> Level 5</button>
+                <button id="level6" class="level-btn text-btn disabled"><i class="fa-solid fa-lock"></i> Level 6</button>
+                <button id="level7" class="level-btn text-btn disabled"><i class="fa-solid fa-lock"></i> Level 7</button>
+                <button id="level8" class="level-btn text-btn disabled"><i class="fa-solid fa-lock"></i> Level 8</button>
+                <button id="level9" class="level-btn text-btn disabled"><i class="fa-solid fa-lock"></i> Level 9</button>
+                <button id="level10" class="level-btn text-btn disabled"><i class="fa-solid fa-lock"></i> Level 10</button>
+                <button id="menu-reset-button" class="text-btn"><i class="fa-solid fa-trash"></i> Recomeçar</button>
+
+            </div>
+        </section>
+        <section id="game-screen" class="hidden">
+
+
+            <div id="game-area">
+                <div id="fps" class="hidden">FPS: </div>
+                <div id="game-sky"></div>
+                <div id="background"></div>
+                <div id="bushes"></div>
+                <canvas id="grid"></canvas>
+                <canvas id="friends"></canvas>
+                <canvas id="drops"></canvas>
+                <canvas id="walls"></canvas>
+                <canvas id="player"></canvas>
+                <canvas id="enemies"></canvas>
+                <canvas id="bullets"></canvas>
+                <div id="clouds"></div>
+            </div>
+
+        </section>
+        <div id="game-modal">
+            <h2 id="game-modal-title">Teste</h2>
+            <div id="game-modal-texts">Teste</div>
+            <img id="game-modal-image">
+            <div id="game-modal-buttons">
+                <button id="game-modal-button1" class="text-btn hidden">Ok</button>
+                <button id="game-modal-button2" class="text-btn hidden">Ok</button>
+            </div>
+
+        </div>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+
+</body>
+
+</html>

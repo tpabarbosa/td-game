@@ -1,0 +1,10 @@
+{
+    "display": "standalone",
+    "orientation": "landscape",
+    "background_color": "#3367D6",
+    "theme_color": "yellow",
+    "scope": "/",
+    "short_name": "My PWA",
+    "name": "My Progressive Web Application",
+    "start_url": "/"
+}
